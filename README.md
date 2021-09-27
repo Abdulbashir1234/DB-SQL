@@ -26,4 +26,4 @@ Here you will find *some* of the exercises assigned during the course and *proba
 
 | exercise       | solution |
 | -------------- | -------- |
-| nothing so far |          |
+| [first](exercises/first.md) | not provided |
