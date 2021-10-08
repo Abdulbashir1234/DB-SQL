@@ -18,13 +18,13 @@ Paolo Atzeni, Stefano Ceri, Stefano Paraboschi and Riccardo Torlone)
 Here you will find all the examples provided during the course.
 
 **Feel absolutely free to make them part of your work.**
-| example        | topic |
-| -------------- | ----- |
-| nothing so far |       |
+| example                            | topic                     |
+| ---------------------------------- | ------------------------- |
+| [select](examples/select_basic.md) | Istruzione SELECT di base |
 ## List of exercises
 Here you will find *some* of the exercises assigned during the course and *probably* their solutions.
 
-| exercise       | solution |
-| -------------- | -------- |
-| [first](exercises/first.md) | not provided |
-| [second](exercises/second.md) | not provided |
+| exercise                      | solution                     |
+| ----------------------------- | ---------------------------- |
+| [first](exercises/first.md)   | not provided                 |
+| [second](exercises/second.md) | [here](exercises/second.sql) |
