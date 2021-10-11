@@ -102,8 +102,8 @@ Come si vede dall'esempio, nella clausola ```ORDER BY``` è possibile utilizzare
 
 Per limitare il numero di righe che saranno restituite dall'istruzione si può usare la clausola ```LIMIT``` che si può usare nelle forme:
 * ```LIMIT count```: limita l'output a *count* righe
-* ```LIMIT offset, count```: limita l'output a *count* righe, ignorano *offset* righe
-* ```LIMIT count OFFSET offset```: limita l'output a *count* righe, ignorano *offset* righe
+* ```LIMIT offset, count```: limita l'output a *count* righe, ignorando *offset* righe
+* ```LIMIT count OFFSET offset```: limita l'output a *count* righe, ignorando *offset* righe
 
 Ad esempio:
 
