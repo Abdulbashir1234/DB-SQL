@@ -3,7 +3,7 @@ L'istruzione ```SELECT``` è parte fondamentale del DML (*Data Manipulation Lang
 
 Essa restituisce una *tabella* con una riga di intestazione ed un numero variabile di righe di dati.
 
-In questo documento considereremo soltanto alcune delle possibilità ed utilizzaremo il DB sakila per gli esempi.
+In questo documento considereremo soltanto alcune delle possibilità ed utilizzeremo il DB sakila per gli esempi.
 
 ## Minimal ```SELECT``` statement
 Le parti obbligatoriamente presenti sono:
