@@ -18,9 +18,10 @@ Paolo Atzeni, Stefano Ceri, Stefano Paraboschi and Riccardo Torlone)
 Here you will find all the examples provided during the course.
 
 **Feel absolutely free to make them part of your work.**
-| example                            | topic                     |
-| ---------------------------------- | ------------------------- |
-| [select](examples/select_basic.md) | Istruzione SELECT di base |
+| example                                 | topic                     |
+| --------------------------------------- | ------------------------- |
+| [select](examples/select_basic.md)      | Istruzione SELECT di base |
+| [grouping](examples/select_grouping_md) | Funzioni di aggregazione  |
 ## List of exercises
 Here you will find *some* of the exercises assigned during the course and *probably* their solutions.
 
