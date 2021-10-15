@@ -21,7 +21,7 @@ Here you will find all the examples provided during the course.
 | example                                 | topic                     |
 | --------------------------------------- | ------------------------- |
 | [select](examples/select_basic.md)      | Istruzione SELECT di base |
-| [grouping](examples/select_grouping_md) | Funzioni di aggregazione  |
+| [grouping](examples/select_grouping.md) | Funzioni di aggregazione  |
 ## List of exercises
 Here you will find *some* of the exercises assigned during the course and *probably* their solutions.
 
