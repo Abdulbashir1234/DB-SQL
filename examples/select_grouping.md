@@ -74,8 +74,13 @@ ci consente di vedere anche quanti attori ci sono con uno specifico *first_name*
 
 La seguente query ci consente di sapere il totale dei pagamenti, suddiviso/raggruppato per anno, mese, giorno, nonché i totali parziali per mese, anno ed il totale generale:
 
-```SELECT YEAR(payment_date) AS anno, MONTH(payment_date) AS mese, DAY(payment_date) AS giorno, SUM(amount) FROM payment GROUP BY anno, mese, giorno WITH ROLLUP;```
+```SELECT YEAR(payment_date) AS anno, MONTH(payment_date) AS mese, DAY(payment_date) AS giorno, SUM(amount) AS totale FROM payment GROUP BY anno, mese, giorno WITH ROLLUP;```
 
+> Si noti che la clausola ```GROUP BY``` **implica** un ordinamento, come se fosse implicitamente specificata una clausola ```ORDER BY``` con la medesima lista di espressioni.
+>
+> È comunque possibile indicare esplicitamente una clausola ```ORDER BY``` con una diversa lista di espressioni, ma in questo caso non è possibile usare contemporaneamente la clausola ```WITH ROLLUP```; ad. es:
+>
+> ```SELECT YEAR(payment_date) AS anno, MONTH(payment_date) AS mese, DAY(payment_date) AS giorno, SUM(amount) AS totale FROM payment GROUP BY anno, mese, giorno ORDER BY totale;```
 ## Aggregate functions
 Le più utilizzate funzioni di aggregazione sono:
 * ```COUNT```: conteggio (vedi dettaglio)
