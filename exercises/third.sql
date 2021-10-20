@@ -45,7 +45,11 @@ SET @DELAY = @DELAY + SLEEP(@DELAY)
 -- 1a Versione: con subqueries
 SELECT district
     FROM address
-    WHERE address_id = (SELECT address_id FROM );
+    WHERE address_id = (SELECT address_id FROM customer WHERE customer_id = 576);
+-- 2a Versione: con JOIN
+SELECT district
+    FROM address JOIN customer USING(address_id)
+    WHERE customer_id = 576;
 SELECT "Il distretto il cui abita il cliente 'WILLARD LUMPKIN'" AS Query;
 SET @DELAY = @DELAY + SLEEP(@DELAY)
 SET @CLIENTE = 'WILLARD LUMPKIN';
@@ -77,18 +81,29 @@ SET @DELAY = @DELAY + SLEEP(@DELAY)
 -- 1a Versione: con subquery
 SELECT city
     FROM city
-    WHERE country_id = (SELECT country_id FROM country WHERE country = 'Argentina');
+    WHERE country_id = (SELECT country_id FROM country WHERE country = 'Argentina')
+    ORDER BY city;
 -- 2a Versione: con JOIN
 SELECT city
     FROM city JOIN country USING(country_id)
-    WHERE country = 'Argentina';
-SELECT "Elenco dei clienti di Cordoba (typo Crdoba) in ordine alfabetico" AS Query;
+    WHERE country = 'Argentina'
+    ORDER BY city;
+SELECT "Elenco dei clienti di Aurora in ordine alfabetico" AS Query;
 SET @DELAY = @DELAY + SLEEP(@DELAY)
+-- 1a Versione: con JOIN
 SELECT first_name, last_name
     FROM customer c
         JOIN address USING (address_id)
         JOIN city USING (city_id)
-    WHERE city = 'Crdoba'
+    WHERE city = 'Aurora'
+    ORDER BY last_name, first_name;
+-- 2a Versione: con subquery
+SELECT first_name, last_name
+    FROM customer
+    WHERE address_id IN (
+                        SELECT address_id FROM address WHERE city_id = (
+                            SELECT city_id FROM city WHERE city = 'Aurora')
+                        )
     ORDER BY last_name, first_name;
 SELECT "Elenco delle lingue in ordine alfabetico inverso" AS Query;
 SET @DELAY = @DELAY + SLEEP(@DELAY)
