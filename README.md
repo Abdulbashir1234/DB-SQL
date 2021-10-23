@@ -30,4 +30,4 @@ Here you will find *some* of the exercises assigned during the course and *proba
 | [first](exercises/first.md)   | not provided                 |
 | [second](exercises/second.md) | [here](exercises/second.sql) |
 | [third](exercises/third.md)   | [here](exercises/third.sql)  |
-| [fourth](exercises/fourth.md) | not provided yet             |
+| [fourth](exercises/fourth.md) | [here](exercises/fourth.sql) |
