@@ -14,7 +14,7 @@ SELECT last_name
     GROUP BY last_name DESC;
 SELECT "L'elenco dei clienti non attivi, con nome, cognome ed e-mail" AS Query;
 SET @DELAY = @DELAY + SLEEP(@DELAY)
-SELECT last_name, first_name
+SELECT last_name, first_name, email
     FROM customer
     WHERE NOT active;
     -- WHERE !active;
