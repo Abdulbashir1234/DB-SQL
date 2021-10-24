@@ -81,6 +81,9 @@ SELECT name, SUM(incasso) AS totale
         JOIN category USING(category_id)
     GROUP BY category_id
     ORDER BY totale DESC;
+-- Più semplicemente, tramite la view sales_by_film_category
+SELECT *
+    FROM sales_by_film_category;
 SELECT "Le categorie di film che hanno fatto incassare di più" AS Query;
 SET @DELAY = @DELAY + SLEEP(@DELAY)
 -- Un po' ambigua: si intende quella o quelle con incasso massimo
@@ -99,6 +102,10 @@ SELECT name, SUM(incasso) AS totale
                 LIMIT 1
         )
     ORDER BY name;
+-- Più semplicemente, tramite la view sales_by_film_category
+SELECT *
+    FROM sales_by_film_category
+    WHERE total_sales = (SELECT MAX(total_sales) FROM sales_by_film_category);
 SELECT "Le dieci categorie di film che hanno fatto incassare di più" AS Query;
 SET @DELAY = @DELAY + SLEEP(@DELAY)
 SELECT name, SUM(incasso) AS totale
@@ -107,6 +114,10 @@ SELECT name, SUM(incasso) AS totale
         JOIN category USING(category_id)
     GROUP BY category_id
     ORDER BY totale DESC
+    LIMIT 10;
+-- Più semplicemente, tramite la view sales_by_film_category
+SELECT *
+    FROM sales_by_film_category
     LIMIT 10;
 SELECT "L'incasso totale per ciascun cliente" AS Query;
 SET @DELAY = @DELAY + SLEEP(@DELAY)
