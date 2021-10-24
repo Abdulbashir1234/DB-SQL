@@ -22,6 +22,7 @@ Here you will find all the examples provided during the course.
 | --------------------------------------- | ------------------------- |
 | [select](examples/select_basic.md)      | Istruzione SELECT di base |
 | [grouping](examples/select_grouping.md) | Funzioni di aggregazione  |
+| [subqueries](examples/subqueries.md)    | Subqueries (incompleto)   |
 ## List of exercises
 Here you will find *some* of the exercises assigned during the course and *probably* their solutions.
 
@@ -31,3 +32,4 @@ Here you will find *some* of the exercises assigned during the course and *proba
 | [second](exercises/second.md) | [here](exercises/second.sql) |
 | [third](exercises/third.md)   | [here](exercises/third.sql)  |
 | [fourth](exercises/fourth.md) | [here](exercises/fourth.sql) |
+| [fifth](exercises/fifth.md)   | not provided yet             |
