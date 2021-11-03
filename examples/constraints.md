@@ -4,7 +4,7 @@ Un vincolo è una proprietà | regola | condizione che deve valere per tutte le 
 
 È tipicamente espresso tramite un predicato logico.
 
-Si riassumomo i diversi tipi di vincoli che possono essere imposti in un database utilizzando i costrutti tipici del linguaggio SQL, rimandando la trattazione di casi particolari ad altra sede.
+Si riassumomo i diversi tipi di vincoli che possono essere imposti in un database utilizzando i costrutti tipici del linguaggio SQL, rimandando la trattazione di casi particolari ad altra sede (views, triggers).
 
 Si distinguono anzitutto in:
 * intrarelational constraints (vincoli intrarelazionali)
@@ -38,7 +38,7 @@ Possono riguardare:
 Sono imposti scegliendo un tipo di dati (tra quelli predefiniti del database) per l'attributo.
 Ad esempio:
 
-```voto UNSIGNED INT```
+```voto TINYINT UNSIGNED```
 
 impone un dominio corrispondente ai numeri naturali [0, 255].
 
@@ -55,9 +55,9 @@ restringe il dominio ai numeri naturali [0, 30].
 
 Permettono di consentire o vietare il valore speciale ```NULL``` per l'attributo.
 
-Ad esempio (attributo obbligatorio): ```voto UNSIGNED INT NOT NULL```
+Ad esempio (attributo obbligatorio): ```voto TINYINT UNSIGNED NOT NULL```
 
-oppure (attributo facoltativo): ```voto UNSIGNED INT NULL```
+oppure (attributo facoltativo): ```voto TINYINT UNSIGNED NULL```
 
 ### Multiple attribute constraints (vincoli di attributi multipli)
 Riguardano (si possono verificare tramite) più colonne di una singola riga di una singola tabella.
@@ -70,12 +70,12 @@ Ad esempio (condizione per avere la lode): ```CHECK (voto = 30 OR NOT lode)```
 
 oppure (applicazione IVA): ```CHECK (totale = imponibile + IVA)```
 
-## key constraints (vincoli di chiave)
+## Key constraints (vincoli di chiave)
 
 Riguardano i valori su (un insieme di) uno o più attributi in tutte le righe di una singola tabella: impongono che non vi siano due righe con i medesimi valori per gli attributi appartenenti all'insieme.
 
 Si distinguono in:
-* vincoli di chiave primaria
+* vincolo di chiave primaria
 * vincoli di chiave candidata
 
 > Si noti che questi vincoli richiedono implicitamente la creazione di particolari strutture dati (indici) per consentire le verifiche di integrità in tempi rapidi (ricerche "dicotomiche" con complessità logaritmica).
@@ -84,8 +84,8 @@ Si distinguono in:
 
 Corrisponde quindi al successivo vincolo di chiave candidata con l'aggiunta implicita di vincoli ```NOT NULL``` per tutti gli attributi appartenenti all'insieme.
 
-Ad esempio: ```PRIMARY KEY(nome, cognome)``` impone che non siano presenti due casi di omonimia (nè di nomi e/o cognomi non specificati)
-mentre ```PRIMARY KEY(nome, cognome, dataNascita)``` consente le omonimie, a patto che la data di nascita sia distinta.
+Ad esempio: ```PRIMARY KEY(nome, cognome)``` impone che non siano presenti casi di omonimia (nè di nomi e/o cognomi non specificati)
+mentre ```PRIMARY KEY(nome, cognome, dataNascita)``` consente le omonimie, a patto che la data di nascita sia distinta per gli omonimi.
 
 ### Candidate key constraint (vincolo di chiave candidata)
 Impone l'univocità dei valori per gli attributi (quando non ```NULL```), ma consente i valori ```NULL```.
@@ -95,7 +95,7 @@ Ad esempio: ```UNIQUE KEY(nome, cognome)``` impone che non siano presenti due ca
 
 Riguardano (si possono verificare tramite) due tabelle (non sempre diverse!).
 
-Si dicono anche vincoli di integrità referenziale perché consentono di garantire la validità dei riferimenti tra una tabella (dipendente) ed un'altra tabella (a volte la stessa).
+Si dicono anche vincoli di integrità referenziale perché consentono di garantire la validità dei riferimenti tra una tabella (dipendente) ed un'altra tabella di riferimento (a volte la stessa).
 
 Consentono anche di specificare quale azione intraprendere quando, in seguito ad una modifica/cancellazione dei dati referenziati, il vincolo sarebbe violato.
 ### Foreign key constraint (vincolo di chiave esterna)
