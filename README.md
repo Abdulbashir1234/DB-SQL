@@ -24,6 +24,7 @@ Here you will find all the examples provided during the course.
 | [grouping](examples/select_grouping.md) | Funzioni di aggregazione  |
 | [subqueries](examples/subqueries.md)    | Subqueries                |
 | [joins](examples/joins.md)              | Joins                     |
+| [constraints](examples/constraints.md)  | Vincoli                   |
 ## List of exercises
 Here you will find *some* of the exercises assigned during the course and *probably* their solutions.
 
