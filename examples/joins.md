@@ -25,7 +25,7 @@ La sintassi generale è del tipo:
 ```LT <tipo join> RT```.
 > Si noti che LT e RT possono essere la stessa tabella!
 ## ```CROSS JOIN```
-È il *join* meno utilizzato, perché non produce altro che il prodotto cartesiano delle due tabelle, ovvero una tabella con **LT x RT** righe formate dalla concatenazione di una riga di LT ed una di RT, per tutte le combinazioni possibili.
+È il *join* meno utilizzato, perché non produce altro che il prodotto cartesiano delle due tabelle, ovvero una tabella con **L x R** righe formate dalla concatenazione di una riga di LT ed una di RT, per tutte le combinazioni possibili.
 
 L'espressione ```LT CROSS JOIN RT``` equivale a ```LT, RT```.
 
