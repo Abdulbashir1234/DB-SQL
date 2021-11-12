@@ -35,3 +35,5 @@ Here you will find *some* of the exercises assigned during the course and *proba
 | [third](exercises/third.md)   | [here](exercises/third.sql)  |
 | [fourth](exercises/fourth.md) | [here](exercises/fourth.sql) |
 | [fifth](exercises/fifth.md)   | [here](exercises/fifth.sql)  |
+| [sixth](exercises/sixth.md)   | not provided yet             |
+
