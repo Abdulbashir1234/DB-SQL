@@ -28,7 +28,7 @@ CREATE TABLE table_name (
     i1 TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP() ON UPDATE CURRENT_TIMESTAMP() INVISIBLE COMMENT "Row update timestamp",
     -- external identifier(s) relationship 1
     f1_k1 INT NOT NULL COMMENT "Mandatory participation",
-    f1_k2 VARCHAR(20) COMMENT "Mandatory participation",
+    f1_k2 VARCHAR(20) NOT NULL COMMENT "Mandatory participation",
     -- external identifiers relationship 2
     f2_k1 INT NULL COMMENT "Optional participation",
     f2_k2 CHAR(3) NULL COMMENT "Optional participation",
@@ -46,11 +46,11 @@ CREATE TABLE table_name (
     -- CONSTRAINT nomeVincolo2 FOREIGN KEY(f2_k1,f2_k2) REFERENCES other_table(k1,k2)
     --  ON UPDATE <ACTION> ON DELETE <ACTION>,
     -- DOMAIN (optional)
-    CHECK(a1 > '1900-01-01'),
+    CONSTRAINT Last120Years CHECK(a1 > '1900-01-01'),
     -- TUPLE (optional)
     CHECK(a1 > '1900-01-01' OR a3 = 'Gray'),
     -- OPTIONAL FOREIGN KEY MEANINGFUL: (both NULL or none NULL)
-    CHECK(f2_k1 IS NULL = f2_k2 IS NULL)
+    CONSTRAINT NoMixUp CHECK(f2_k1 IS NULL = f2_k2 IS NULL)
 );
 
 SELECT "EXPLAIN table_name;" AS "Visualizzazione sintetica della tabella";
@@ -66,6 +66,7 @@ CREATE OR REPLACE VIEW view_name AS
         FROM table_name
 --      WITH CASCADED CHECK OPTION
         ;
+
 -- other tables ...
 -- other things ... triggers, procedures, ...
 
