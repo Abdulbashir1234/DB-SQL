@@ -18,17 +18,18 @@ Paolo Atzeni, Stefano Ceri, Stefano Paraboschi and Riccardo Torlone)
 Here you will find all the examples provided during the course.
 
 **Feel absolutely free to make them part of your work.**
-| example                                           | topic                                    |
-| ------------------------------------------------- | ---------------------------------------- |
-| [select](examples/select_basic.md)                | Istruzione SELECT di base                |
-| [grouping](examples/select_grouping.md)           | Funzioni di aggregazione                 |
-| [subqueries](examples/subqueries.md)              | Subqueries                               |
-| [joins](examples/joins.md)                        | Joins                                    |
-| [constraints](examples/constraints.md)            | Vincoli                                  |
-| [DB_schema](examples/DB_schema.sql)               | Script creazione DB (part 1)             |
-| [DBCompany-schema](examples/DBCompany-schema.sql) | Script creazione DB Company (con errore) |
-| [translation](examples/translation.md)            | Traduzione a schema relazionale          |
-| [Company DB](examples/company/README.md)          | Esempi DB Company                        |
+| example                                                | topic                                       |
+| ------------------------------------------------------ | ------------------------------------------- |
+| [select](examples/select_basic.md)                     | Istruzione SELECT di base                   |
+| [grouping](examples/select_grouping.md)                | Funzioni di aggregazione                    |
+| [subqueries](examples/subqueries.md)                   | Subqueries                                  |
+| [joins](examples/joins.md)                             | Joins                                       |
+| [constraints](examples/constraints.md)                 | Vincoli                                     |
+| [DB_schema](examples/DB_schema.sql)                    | Script creazione DB (part 1)                |
+| [DBCompany-schema](examples/DBCompany-schema.sql)      | Script creazione DB Company (con errore)    |
+| [translation](examples/translation.md)                 | Traduzione a schema relazionale             |
+| [Company DB](examples/company/README.md)               | Esempi DB Company                           |
+| [translation summary](examples/translation_summary.md) | Traduzione a schema relazionale (riassunto) |
 ## List of exercises
 Here you will find *some* of the exercises assigned during the course and *probably* their solutions.
 
