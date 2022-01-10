@@ -135,8 +135,8 @@ CREATE TABLE E2 (
 CREATE TABLE R (
     -- primary key field(s)
     AE11 VARCHAR(30),
-    AE21 VARCHAR(30),
     -- mandatory fields
+    AE21 VARCHAR(30) NOT NULL,
     AR DECIMAL(10, 2) NOT NULL,
     -- CONSTRAINTS:
     PRIMARY KEY (AE11),
@@ -250,6 +250,7 @@ CREATE TABLE E2 (
     AE21 VARCHAR(30),
     -- mandatory fields
     AE22 DECIMAL(10, 2) NOT NULL,
+    -- optional fields
     AE11 VARCHAR(30) NULL,
     AR DECIMAL(10, 2) NULL,
     -- CONSTRAINTS:
@@ -272,6 +273,7 @@ CREATE TABLE E1 (
     AE11 VARCHAR(30),
     -- mandatory fields
     AE12 DECIMAL(10, 2) NOT NULL,
+    -- optional fields
     AE21 VARCHAR(30) NULL,
     AR DECIMAL(10, 2) NULL,
     -- CONSTRAINTS:
@@ -299,13 +301,15 @@ CREATE TABLE E2 (
 ) COMMENT "Table for entity E2";
 CREATE TABLE R (
     -- primary key field(s)
-    AE11 VARCHAR(30),
-    AE21 VARCHAR(30),
+    AE11 VARCHAR(30) NOT NULL,
+    AE21 VARCHAR(30) NOT NULL,
     -- mandatory fields
     AR DECIMAL(10, 2) NOT NULL,
     -- CONSTRAINTS:
-    PRIMARY KEY (AE11),
-    COSTRAINT RE2max UNIQUE(AE21),
+    -- PRIMARY KEY (AE11),
+    -- COSTRAINT RE2max UNIQUE(AE21),
+    PRIMARY KEY (AE21),
+    COSTRAINT RE1max UNIQUE(AE11),
     COSTRAINT RE1 FOREIGN KEY AE11 REFERENCES E1(AE11),
     COSTRAINT RE2 FOREIGN KEY AE21 REFERENCES E2(AE21)
 ) COMMENT "Table for relationship R";
