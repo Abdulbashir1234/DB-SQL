@@ -32,6 +32,7 @@ Here you will find all the examples provided during the course.
 | [ER DB](examples/ERDiagram-schema.sql)                  | Esempio DB ER                               |
 | [Formazione DB](examples/Formazione-schema.sql)         | Esempio DB Società di formazione            |
 | [translation summary](examples/translation_summary.sql) | Traduzione a schema relazionale (riassunto) |
+| [Views](examples/views.md.sql)                          | Views, scopi ed esempi                      |
 ## List of exercises
 Here you will find *some* of the exercises assigned during the course and *probably* their solutions.
 
