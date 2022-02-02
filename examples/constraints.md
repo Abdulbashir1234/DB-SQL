@@ -44,7 +44,7 @@ impone un dominio corrispondente ai numeri naturali [0, 255].
 
 #### Domain limit constraints (vincoli di limite al dominio)
 
-Sono imposti con un predicato che restringe ulteriormente in dominio dell'attributo.
+Sono imposti con un predicato che restringe ulteriormente il dominio dell'attributo.
 Ad esempio:
 
 ```CHECK (voto <= 30)```

@@ -104,9 +104,9 @@ ALTER TABLE employee
     ADD CONSTRAINT membershipDepartment FOREIGN KEY(department, branch) REFERENCES department(name, branch)
         ON UPDATE CASCADE ON DELETE NO ACTION,
     -- OPTIONAL FOREIGN KEY MEANINGFUL: (both NULL or none NULL)
-    ADD CONSTRAINT DepartmentBranchNULLS CHECK((department IS NULL) = (branch IS NULL)),
+    ADD CONSTRAINT DepartmentBranchNULLS CHECK(ISNULL(department) = ISNULL(branch)),
     -- Optional Relationship mandatory attribute MEANINGFUL: (NULL if no partecipation)
-    ADD CONSTRAINT NoStarDateIfNoMembership CHECK((department IS NULL) = (start IS NULL));
+    ADD CONSTRAINT NoStarDateIfNoMembership CHECK(ISNULL(department) = ISNULL(start));
 
 SELECT "ALTER TABLE department (...);" AS "Modifica tabella department";
 ALTER TABLE department

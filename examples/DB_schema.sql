@@ -50,7 +50,9 @@ CREATE TABLE table_name (
     -- TUPLE (optional)
     CHECK(a1 > '1900-01-01' OR a3 = 'Gray'),
     -- OPTIONAL FOREIGN KEY MEANINGFUL: (both NULL or none NULL)
-    CONSTRAINT NoMixUp CHECK(f2_k1 IS NULL = f2_k2 IS NULL)
+    -- CONSTRAINT NoMixUp CHECK(f2_k1 IS NULL = f2_k2 IS NULL) doesn't work!!!
+    -- CONSTRAINT NoMixUp CHECK((f2_k1 IS NULL) = (f2_k2 IS NULL)) -- parentheses needed!!!
+    CONSTRAINT NoMixUp CHECK(ISNULL(f2_k1) = ISNULL(f2_k2)) -- much better: obvious parentheses
 );
 
 SELECT "EXPLAIN table_name;" AS "Visualizzazione sintetica della tabella";
