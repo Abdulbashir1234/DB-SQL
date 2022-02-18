@@ -40,6 +40,7 @@ Here you will find all the examples provided during the course.
 | [Formazione DB](examples/Formazione-schema.sql)         | Esempio DB Società di formazione            |
 | [Translation summary](examples/translation_summary.sql) | Traduzione a schema relazionale (riassunto) |
 | [Views](examples/views.md)                              | Views, scopi ed esempi                      |
+| [Triggers](examples/triggers.md)                        | Triggers, scopi ed esempi                   |
 
 ## List of exercises
 
