@@ -66,3 +66,7 @@ Here you will find *some* of the lab tests assigned during the course and *proba
 | 20211215b                          | [Here](tests/Soluzione20211215b.sql) |
 | 20211217a                          | [Here](tests/Soluzione20211217a.sql) |
 | 20211217b                          | [Here](tests/Soluzione20211217b.sql) |
+| 20220202a                          | [Here](tests/Soluzione20220202a.sql) |
+| 20220202b                          | [Here](tests/Soluzione20220202b.sql) |
+| 20220204a                          | [Here](tests/Soluzione20220204a.sql) |
+| 20220204b                          | [Here](tests/Soluzione20220204b.sql) |
